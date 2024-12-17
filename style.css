@@ -1,0 +1,262 @@
+/* 全体のリセット */
+
+
+
+/* ハンバーガーメニュー */
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #fff; /* 明るい色で見やすく */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ✕ボタンのスタイル */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* サイドメニュー */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* 半透明で海を連想 */
+    color: #fff;
+    transition: all 0.3s ease;
+    z-index: 90;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+.side-menu ul li {
+    margin: 20px 0;
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.side-menu ul li a:hover {
+    color: #00bcd4; /* 水色で強調 */
+}
+
+.side-menu.open {
+    right: 0;
+}
+
+/* ヒーローセクション */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #0077cc, #005f83);
+    overflow: hidden;
+}
+
+.logo {
+    width: 200px;
+    opacity: 0; /* 初期状態：透明 */
+    transform: translateY(50px); /* 初期状態：下にズレている */
+    animation: fadeInUp 2s ease-out forwards; /* アニメーションを適用 */
+}
+
+.site-title {
+    font-size: 36px;
+    color: #fff;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 1.5s forwards; /* 遅延アニメーション */
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #ffecb3;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 2s forwards; /* 遅延アニメーション */
+}
+
+/* フェードインアニメーション */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* メインコンテンツ */
+main.ocean-background {
+    background: url('うみたまご　写真　イラスト/animals-water-marine-life-seamless-pattern-cute-sea-creatures-octopus-fish-starfish-jellyfish-whale-crab-children-s-wallpaper-vector-illustration_505980-115.avif') no-repeat center center;
+    background-size: cover;
+    color: #101010;
+    padding: 40px 20px;
+    min-height: 100vh;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+.ocean-background h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #382bea; 
+}
+
+.ocean-background p {
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.ocean-background .text-box h2 {
+    font-size: 28px;
+    margin-top: 40px;
+    text-align: center;
+    color: #ffdb4d; /* 明るい黄色でアクセント */
+}
+
+.ocean-background ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000000; /* 軽い水色でリスト項目を表示 */
+}
+
+/* フッター */
+footer {
+    background: #004d66; /* 深海のような濃い青 */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+    font-size: 14px;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        top: 40px;
+        right: 15px;
+    }
+
+    .ocean-background h1 {
+        font-size: 36px;
+    }
+
+    .ocean-background p {
+        font-size: 16px;
+    }
+
+    .side-menu ul li {
+        margin: 15px 0;
+    }
+}
+
+/* 文章全体を囲む白い枠のスタイル */
+.text-box {
+    background: rgba(255, 255, 255, 0.9); /* 半透明の白い背景 */
+    border: 2px solid #fff; /* 白い枠線 */
+    padding: 20px; /* 内側の余白 */
+    margin: 20px auto; /* 外側の余白 */
+    border-radius: 10px; /* 角を丸める */
+    max-width: 800px; /* 幅を制限 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 少し影を追加 */
+}
+
+/* 文章のテキストスタイル */
+.text-box p {
+    color: #333; /* テキストの色を濃いグレーに */
+    font-size: 16px; /* 標準的なサイズ */
+    line-height: 1.8; /* 読みやすい行間 */
+    margin: 0; /* 段落間の余白をリセット */
+    text-align: justify; /* 文章を整列 */
+}
+
+/* 動画背景のスタイル */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.video-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.video-container h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.video-container p {
+    font-size: 24px;
+}
+

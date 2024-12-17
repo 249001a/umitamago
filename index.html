@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>うみたまご | ホーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="side-menu">
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">うみたまごについて</a></li>
+            <li><a href="events.html">イベント情報</a></li>
+            <li><a href="facilities.html">施設案内</a></li>
+            <li><a href="tickets.html">チケット情報</a></li>
+            <li><a href="access.html">アクセス情報</a></li>
+        </ul>
+    </div>
+
+    <!-- 動画背景とテキスト -->
+    <div class="video-container">
+        <video class="video" autoplay muted  playsinline>
+            <source src="うみたまご　写真　イラスト\名称未設定のデザイン (3).mp4" type="video/mp4">
+            お使いのブラウザは動画をサポートしていません。
+        </video>
+        <div class="overlay">
+            <h1>ようこそ、うみたまごへ！</h1>
+            <p>海と生命の物語を体験しましょう。</p>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 2024 うみたまご | 大分マリーンパレス水族館</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ハンバーガーメニューの操作
+        const hamburger = document.querySelector('.hamburger');
+        const sideMenu = document.querySelector('.side-menu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            sideMenu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

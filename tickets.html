@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チケット情報 | うみたまご</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="side-menu">
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">うみたまごについて</a></li>
+            <li><a href="events.html">イベント情報</a></li>
+            <li><a href="facilities.html">施設案内</a></li>
+            <li><a href="tickets.html">チケット情報</a></li>
+            <li><a href="access.html">アクセス情報</a></li>
+        </ul>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <main class="ocean-background">
+        
+        <div class="text-box">
+            <h1>チケット情報</h1>
+            <p>うみたまごのチケット料金と購入方法をご案内します。</p>
+
+            <h2>チケット料金</h2>
+            <table class="ticket-table">
+                <thead>
+                    <tr>
+                        <th>種別</th>
+                        <th>料金</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>大人（高校生以上）</td>
+                        <td>2,500円</td>
+                    </tr>
+                    <tr>
+                        <td>小・中学生</td>
+                        <td>1,400円</td>
+                    </tr>
+                    <tr>
+                        <td>幼児（4歳以上）</td>
+                        <td>800円</td>
+                    </tr>
+                        <td>シニア（70歳以上）</td>
+                        <td>2,000円</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>割引・特典</h2>
+            <ul>
+                <li><strong>団体割引：</strong>20名以上で1名あたり200円引き。</li>
+                <li><strong>年間パスポート：</strong>大人7,000円、子ども3,500円。</li>
+                <li><strong>特別イベント割引：</strong>イベント期間中は特別料金を適用。</li>
+            </ul>
+
+            <h2>購入方法</h2>
+            <p>
+                チケットは以下の方法で購入できます：
+            </p>
+            <ul>
+                <li>うみたまごの公式ホームページからオンライン購入。</li>
+                <li>現地窓口で当日券を購入。</li>
+                <li>主要なコンビニエンスストア（セブン-イレブン、ローソンなど）。</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 2024 うみたまご | 大分マリーンパレス水族館</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ハンバーガーメニューの操作
+        const hamburger = document.querySelector('.hamburger');
+        const sideMenu = document.querySelector('.side-menu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            sideMenu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
