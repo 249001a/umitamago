@@ -1,4 +1,11 @@
-/* 全体のリセット */
+
+
+main {
+    min-height: 100vh; /* ビューポートの高さに合わせる */
+    display: flex;
+    align-items: center; /* 中央揃え */
+    justify-content: center;
+}
 
 
 
@@ -133,7 +140,7 @@
 
 /* メインコンテンツ */
 main.ocean-background {
-    background: url('うみたまご　写真　イラスト/animals-water-marine-life-seamless-pattern-cute-sea-creatures-octopus-fish-starfish-jellyfish-whale-crab-children-s-wallpaper-vector-illustration_505980-115.avif') no-repeat center center;
+    background: url('aaa/animals-water-marine-life-seamless-pattern-cute-sea-creatures-octopus-fish-starfish-jellyfish-whale-crab-children-s-wallpaper-vector-illustration_505980-115.avif') no-repeat center center;
     background-size: cover;
     color: #101010;
     padding: 40px 20px;
@@ -260,3 +267,8 @@ footer {
     font-size: 24px;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
