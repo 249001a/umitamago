@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アクセス情報 | うみたまご</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="side-menu">
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">うみたまごについて</a></li>
+            <li><a href="events.html">イベント情報</a></li>
+            <li><a href="facilities.html">施設案内</a></li>
+            <li><a href="tickets.html">チケット情報</a></li>
+            <li><a href="access.html">アクセス情報</a></li>
+        </ul>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <main class="ocean-background">
+        <h1>アクセス情報</h1>
+        <div class="text-box">
+            <p>
+                うみたまごへのアクセス方法をご案内します：
+            </p>
+            <h2>所在地</h2>
+            <p>〒870-0100<br>大分県大分市神崎3078-22</p>
+
+            <h2>交通手段</h2>
+            <ul>
+                <li><strong>車でお越しの場合：</strong>大分自動車道「大分IC」から約20分。</li>
+                <li><strong>電車をご利用の場合：</strong>JR大分駅からバスで約30分、「うみたまご前」下車。</li>
+                <li><strong>バスをご利用の場合：</strong>大分交通のバスをご利用ください。</li>
+            </ul>
+
+            <h2>駐車場</h2>
+            <p>
+                施設内には無料駐車場がございます。大型車や車椅子利用者専用スペースも完備しています。
+            </p>
+
+            <h2>地図</h2>
+            <p>以下の地図をご参照ください。</p>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.5062826265!2d131.62107351618532!3d33.2342743808451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354735ee3304a1ef%3A0x6a7e1234c9dbf2bf!2z44OV44Kj44K744Kq44Oz44Kw44Or!5e0!3m2!1sen!2sjp!4v1234567890123" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 2024 うみたまご | 大分マリーンパレス水族館</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ハンバーガーメニューの操作
+        const hamburger = document.querySelector('.hamburger');
+        const sideMenu = document.querySelector('.side-menu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            sideMenu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
